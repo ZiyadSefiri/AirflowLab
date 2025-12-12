@@ -1,0 +1,13 @@
+ services:
+  
+  extract:
+    build: 
+      context: ./Extract
+      dockerfile: ./.dockerfile
+    image: extract:latest
+
+  transform:
+    build: 
+      context: ./Transform
+      dockerfile: ./.dockerfile
+    image: transform:latest

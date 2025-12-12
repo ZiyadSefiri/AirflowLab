@@ -16,7 +16,7 @@ API_KEY = os.environ.get("API_KEY")
 
 # Paths
 BASE_DIR = Path(__file__).parent
-DATA_DIR = BASE_DIR / "input_data"  # Data folder at same level as script
+DATA_DIR = BASE_DIR / "output_data"  # Data folder at same level as script
 DATA_DIR.mkdir(exist_ok=True)
 
 # ----------------------------
