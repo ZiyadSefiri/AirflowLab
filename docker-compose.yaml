@@ -61,7 +61,7 @@ x-airflow-common:
     AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@postgres/airflow
     AIRFLOW__CELERY__RESULT_BACKEND: db+postgresql://airflow:airflow@postgres/airflow
     AIRFLOW__CELERY__BROKER_URL: redis://:@redis:6379/0
-    AIRFLOW__CORE__FERNET_KEY: ''
+    #AIRFLOW__CORE__FERNET_KEY: ''
     AIRFLOW__CORE__DAGS_ARE_PAUSED_AT_CREATION: 'true'
     AIRFLOW__CORE__LOAD_EXAMPLES: 'true'
     AIRFLOW__CORE__EXECUTION_API_SERVER_URL: 'http://airflow-apiserver:8080/execution/'
@@ -72,7 +72,7 @@ x-airflow-common:
     AIRFLOW__SCHEDULER__ENABLE_HEALTH_CHECK: 'true'
     # WARNING: Use _PIP_ADDITIONAL_REQUIREMENTS option ONLY for a quick checks
     # for other purpose (development, test and especially production usage) build/extend Airflow image.
-    _PIP_ADDITIONAL_REQUIREMENTS: "apache-airflow-providers-docker"
+
     # The following line can be used to set a custom config file, stored in the local config folder
     AIRFLOW_CONFIG: '/opt/airflow/config/airflow.cfg'
   volumes:
@@ -138,6 +138,8 @@ services:
     volumes: 
       - ./Orchestrator:/opt/airflow/dags
       - ./logs:/opt/airflow/logs 
+    env_file:
+      - .env
 
   airflow-scheduler:
     <<: *airflow-common
@@ -155,7 +157,9 @@ services:
         condition: service_completed_successfully
     volumes: 
       - ./Orchestrator:/opt/airflow/dags
-      - ./logs:/opt/airflow/logs 
+      - ./logs:/opt/airflow/logs
+    env_file:
+      - .env
   airflow-dag-processor:
     <<: *airflow-common
     command: dag-processor
@@ -173,11 +177,14 @@ services:
     volumes: 
       - ./Orchestrator:/opt/airflow/dags
       - ./logs:/opt/airflow/logs 
+    env_file:
+      - .env
             
 
   airflow-worker:
     <<: *airflow-common
     command: celery worker
+    user: "0:0"
     build: 
       context: .
       dockerfile: .dockerfile
@@ -205,6 +212,8 @@ services:
       - ./Orchestrator:/opt/airflow/dags
       - /var/run/docker.sock:/var/run/docker.sock
       - ./logs:/opt/airflow/logs 
+    env_file:
+      - .env
 
 
   airflow-triggerer:
@@ -221,6 +230,8 @@ services:
       <<: *airflow-common-depends-on
       airflow-init:
         condition: service_completed_successfully
+    env_file:
+      - .env
 
   airflow-init:
     <<: *airflow-common

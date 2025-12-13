@@ -6,8 +6,8 @@ from pathlib import Path
 
 # Define paths relative to repo root
 repo_root = Path(__file__).parent.parent
-raw_data = repo_root /"Jobs"/"RawData"
-processed_data = repo_root /"Jobs"/"ProcessedData"
+raw_data = repo_root/"Jobs"/"RawData"
+processed_data = repo_root/"Jobs"/"ProcessedData"
 
 with DAG(
     dag_id="youtube_ETA_pipeline",        # Unique DAG ID
@@ -24,7 +24,7 @@ with DAG(
         auto_remove="success",           # Remove container if successful
         docker_url="unix://var/run/docker.sock",  # Use host Docker
         network_mode="bridge",
-        mounts=[Mount(source=str(raw_data), target="/app/output_data", type="bind")],
+        mounts=[Mount(source="/home/ziyad/Dev/AirflowLab/Jobs/RawData", target="/app/output_data", type="bind")],
         do_xcom_push=False
     )
 
@@ -36,8 +36,8 @@ with DAG(
         docker_url="unix://var/run/docker.sock",
         network_mode="bridge",
         mounts=[
-            Mount(source=str(raw_data), target="/app/input_data", type="bind"),
-            Mount(source=str(processed_data), target="/app/output_data", type="bind")
+            Mount(source="/home/ziyad/Dev/AirflowLab/Jobs/RawData", target="/app/input_data", type="bind"),
+            Mount(source="/home/ziyad/Dev/AirflowLab/Jobs/ProcessedData", target="/app/output_data", type="bind")
         ],
         do_xcom_push=False
     )
