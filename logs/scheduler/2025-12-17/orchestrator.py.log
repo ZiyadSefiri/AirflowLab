@@ -1,0 +1,28 @@
+[2025-12-17T00:00:29.763+0000] {processor.py:186} INFO - Started process (PID=447) to work on /opt/airflow/dags/orchestrator.py
+[2025-12-17T00:00:29.765+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/orchestrator.py for tasks to queue
+[2025-12-17T00:00:29.770+0000] {logging_mixin.py:190} INFO - [2025-12-17T00:00:29.769+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/orchestrator.py
+[2025-12-17T00:00:29.800+0000] {processor.py:925} INFO - DAG(s) 'youtube_ETA_pipeline' retrieved from /opt/airflow/dags/orchestrator.py
+[2025-12-17T00:00:29.869+0000] {logging_mixin.py:190} INFO - [2025-12-17T00:00:29.868+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-12-17T00:00:29.936+0000] {logging_mixin.py:190} INFO - [2025-12-17T00:00:29.935+0000] {dag.py:4180} INFO - Setting next_dagrun for youtube_ETA_pipeline to 2025-12-17 00:00:00+00:00, run_after=2025-12-18 00:00:00+00:00
+[2025-12-17T00:00:29.977+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/orchestrator.py took 0.228 seconds
+[2025-12-17T00:01:00.154+0000] {processor.py:186} INFO - Started process (PID=458) to work on /opt/airflow/dags/orchestrator.py
+[2025-12-17T00:01:00.155+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/orchestrator.py for tasks to queue
+[2025-12-17T00:01:00.160+0000] {logging_mixin.py:190} INFO - [2025-12-17T00:01:00.159+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/orchestrator.py
+[2025-12-17T00:01:00.187+0000] {processor.py:925} INFO - DAG(s) 'youtube_ETA_pipeline' retrieved from /opt/airflow/dags/orchestrator.py
+[2025-12-17T00:01:00.251+0000] {logging_mixin.py:190} INFO - [2025-12-17T00:01:00.251+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-12-17T00:01:00.311+0000] {logging_mixin.py:190} INFO - [2025-12-17T00:01:00.310+0000] {dag.py:4180} INFO - Setting next_dagrun for youtube_ETA_pipeline to 2025-12-17 00:00:00+00:00, run_after=2025-12-18 00:00:00+00:00
+[2025-12-17T00:01:00.352+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/orchestrator.py took 0.211 seconds
+[2025-12-17T00:01:30.522+0000] {processor.py:186} INFO - Started process (PID=469) to work on /opt/airflow/dags/orchestrator.py
+[2025-12-17T00:01:30.524+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/orchestrator.py for tasks to queue
+[2025-12-17T00:01:30.530+0000] {logging_mixin.py:190} INFO - [2025-12-17T00:01:30.529+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/orchestrator.py
+[2025-12-17T00:01:30.560+0000] {processor.py:925} INFO - DAG(s) 'youtube_ETA_pipeline' retrieved from /opt/airflow/dags/orchestrator.py
+[2025-12-17T00:01:30.622+0000] {logging_mixin.py:190} INFO - [2025-12-17T00:01:30.622+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-12-17T00:01:30.676+0000] {logging_mixin.py:190} INFO - [2025-12-17T00:01:30.676+0000] {dag.py:4180} INFO - Setting next_dagrun for youtube_ETA_pipeline to 2025-12-17 00:00:00+00:00, run_after=2025-12-18 00:00:00+00:00
+[2025-12-17T00:01:30.713+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/orchestrator.py took 0.207 seconds
+[2025-12-17T00:02:00.908+0000] {processor.py:186} INFO - Started process (PID=480) to work on /opt/airflow/dags/orchestrator.py
+[2025-12-17T00:02:00.910+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/orchestrator.py for tasks to queue
+[2025-12-17T00:02:00.915+0000] {logging_mixin.py:190} INFO - [2025-12-17T00:02:00.915+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/orchestrator.py
+[2025-12-17T00:02:00.943+0000] {processor.py:925} INFO - DAG(s) 'youtube_ETA_pipeline' retrieved from /opt/airflow/dags/orchestrator.py
+[2025-12-17T00:02:01.006+0000] {logging_mixin.py:190} INFO - [2025-12-17T00:02:01.005+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-12-17T00:02:01.061+0000] {logging_mixin.py:190} INFO - [2025-12-17T00:02:01.061+0000] {dag.py:4180} INFO - Setting next_dagrun for youtube_ETA_pipeline to 2025-12-17 00:00:00+00:00, run_after=2025-12-18 00:00:00+00:00
+[2025-12-17T00:02:01.103+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/orchestrator.py took 0.206 seconds

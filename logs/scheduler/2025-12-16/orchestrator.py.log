@@ -118,3 +118,24 @@
 [2025-12-16T23:58:28.335+0000] {logging_mixin.py:190} INFO - [2025-12-16T23:58:28.334+0000] {dag.py:3239} INFO - Sync 1 DAGs
 [2025-12-16T23:58:28.400+0000] {logging_mixin.py:190} INFO - [2025-12-16T23:58:28.399+0000] {dag.py:4180} INFO - Setting next_dagrun for youtube_ETA_pipeline to 2025-12-16 00:00:00+00:00, run_after=2025-12-17 00:00:00+00:00
 [2025-12-16T23:58:28.441+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/orchestrator.py took 0.225 seconds
+[2025-12-16T23:58:58.644+0000] {processor.py:186} INFO - Started process (PID=411) to work on /opt/airflow/dags/orchestrator.py
+[2025-12-16T23:58:58.646+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/orchestrator.py for tasks to queue
+[2025-12-16T23:58:58.654+0000] {logging_mixin.py:190} INFO - [2025-12-16T23:58:58.653+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/orchestrator.py
+[2025-12-16T23:58:58.684+0000] {processor.py:925} INFO - DAG(s) 'youtube_ETA_pipeline' retrieved from /opt/airflow/dags/orchestrator.py
+[2025-12-16T23:58:58.750+0000] {logging_mixin.py:190} INFO - [2025-12-16T23:58:58.749+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-12-16T23:58:58.810+0000] {logging_mixin.py:190} INFO - [2025-12-16T23:58:58.809+0000] {dag.py:4180} INFO - Setting next_dagrun for youtube_ETA_pipeline to 2025-12-16 00:00:00+00:00, run_after=2025-12-17 00:00:00+00:00
+[2025-12-16T23:58:58.851+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/orchestrator.py took 0.219 seconds
+[2025-12-16T23:59:28.998+0000] {processor.py:186} INFO - Started process (PID=422) to work on /opt/airflow/dags/orchestrator.py
+[2025-12-16T23:59:29.000+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/orchestrator.py for tasks to queue
+[2025-12-16T23:59:29.006+0000] {logging_mixin.py:190} INFO - [2025-12-16T23:59:29.006+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/orchestrator.py
+[2025-12-16T23:59:29.037+0000] {processor.py:925} INFO - DAG(s) 'youtube_ETA_pipeline' retrieved from /opt/airflow/dags/orchestrator.py
+[2025-12-16T23:59:29.105+0000] {logging_mixin.py:190} INFO - [2025-12-16T23:59:29.105+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-12-16T23:59:29.167+0000] {logging_mixin.py:190} INFO - [2025-12-16T23:59:29.167+0000] {dag.py:4180} INFO - Setting next_dagrun for youtube_ETA_pipeline to 2025-12-16 00:00:00+00:00, run_after=2025-12-17 00:00:00+00:00
+[2025-12-16T23:59:29.213+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/orchestrator.py took 0.233 seconds
+[2025-12-16T23:59:59.395+0000] {processor.py:186} INFO - Started process (PID=433) to work on /opt/airflow/dags/orchestrator.py
+[2025-12-16T23:59:59.397+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/orchestrator.py for tasks to queue
+[2025-12-16T23:59:59.403+0000] {logging_mixin.py:190} INFO - [2025-12-16T23:59:59.402+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/orchestrator.py
+[2025-12-16T23:59:59.433+0000] {processor.py:925} INFO - DAG(s) 'youtube_ETA_pipeline' retrieved from /opt/airflow/dags/orchestrator.py
+[2025-12-16T23:59:59.502+0000] {logging_mixin.py:190} INFO - [2025-12-16T23:59:59.501+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-12-16T23:59:59.561+0000] {logging_mixin.py:190} INFO - [2025-12-16T23:59:59.561+0000] {dag.py:4180} INFO - Setting next_dagrun for youtube_ETA_pipeline to 2025-12-16 00:00:00+00:00, run_after=2025-12-17 00:00:00+00:00
+[2025-12-16T23:59:59.603+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/orchestrator.py took 0.222 seconds
