@@ -1,0 +1,21 @@
+[2025-12-16T23:51:26.646+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-12-16T23:51:26.687+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: youtube_ETA_pipeline.extract scheduled__2025-12-15T00:00:00+00:00 [queued]>
+[2025-12-16T23:51:26.706+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: youtube_ETA_pipeline.extract scheduled__2025-12-15T00:00:00+00:00 [queued]>
+[2025-12-16T23:51:26.706+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 1
+[2025-12-16T23:51:26.736+0000] {taskinstance.py:2889} INFO - Executing <Task(DockerOperator): extract> on 2025-12-15 00:00:00+00:00
+[2025-12-16T23:51:26.754+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=225) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-12-16T23:51:26.757+0000] {standard_task_runner.py:72} INFO - Started process 227 to run task
+[2025-12-16T23:51:26.754+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'youtube_ETA_pipeline', 'extract', 'scheduled__2025-12-15T00:00:00+00:00', '--job-id', '4', '--raw', '--subdir', 'DAGS_FOLDER/orchestrator.py', '--cfg-path', '/tmp/tmp7b0tzhr_']
+[2025-12-16T23:51:26.759+0000] {standard_task_runner.py:105} INFO - Job 4: Subtask extract
+[2025-12-16T23:51:26.868+0000] {task_command.py:467} INFO - Running <TaskInstance: youtube_ETA_pipeline.extract scheduled__2025-12-15T00:00:00+00:00 [running]> on host 40b1516acf48
+[2025-12-16T23:51:27.386+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='youtube_ETA_pipeline' AIRFLOW_CTX_TASK_ID='extract' AIRFLOW_CTX_EXECUTION_DATE='2025-12-15T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-12-15T00:00:00+00:00'
+[2025-12-16T23:51:27.387+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-12-16T23:51:27.543+0000] {docker.py:367} INFO - Starting docker container from image extract:latest
+[2025-12-16T23:51:27.549+0000] {docker.py:375} WARNING - Using remote engine or docker-in-docker and mounting temporary volume from host is not supported. Falling back to `mount_tmp_dir=False` mode. You can set `mount_tmp_dir` parameter to False to disable mounting and remove the warning
+[2025-12-16T23:54:19.918+0000] {docker.py:438} INFO - Could not get comments for video P6xJm38guuM
+[2025-12-16T23:54:19.919+0000] {docker.py:438} INFO - Extracted 1 channels, 1252 videos, 1251 comment sets
+[2025-12-16T23:54:20.418+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-12-16T23:54:20.420+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=youtube_ETA_pipeline, task_id=extract, run_id=scheduled__2025-12-15T00:00:00+00:00, execution_date=20251215T000000, start_date=20251216T235126, end_date=20251216T235420
+[2025-12-16T23:54:20.481+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-12-16T23:54:20.821+0000] {taskinstance.py:3895} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-12-16T23:54:20.824+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
