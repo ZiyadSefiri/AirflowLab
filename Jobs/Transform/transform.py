@@ -47,14 +47,23 @@ def transform_video_data(video_df: pd.DataFrame) -> pd.DataFrame:
 # --------------------------
 
 # Get path to data folder relative to this script
-base_path = Path(__file__).parent.parent
-data_path = base_path/ "Extract" / "Data" / "video_details.json"  # Adjust folder/file names as needed
+base_path = Path(__file__).resolve().parent
+input_path = base_path / "input_data" / "video_details.json"
+output_dir = base_path / "output_data"
+output_file = output_dir / "video_details_transformed.parquet"
+
+# Ensure output directory exists
+output_dir.mkdir(parents=True, exist_ok=True)
 
 # Load the raw data
-df = pd.read_json(data_path)
+df = pd.read_json(input_path)
 
 # Transform
 transformed_df = transform_video_data(df)
 
-# Preview
-print(transformed_df.head())
+# Serialize
+transformed_df.to_parquet(output_file, index=False)
+
+print(f"Saved transformed data to {output_file}")
+
+

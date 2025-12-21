@@ -11,3 +11,21 @@
       context: ./Transform
       dockerfile: ./.dockerfile
     image: transform:latest
+
+  analyse:
+    build:
+      context: ./Analyse
+      dockerfile: ./.dockerfile
+    image: analyse:latest
+
+  garbage_collector1:
+    build: 
+      context: ./DeleteRawData
+      dockerfile: ./.dockerfile
+    image: garbage_collector1:latest
+  
+  garbage_collector2:
+    build: 
+      context: ./DeleteProcessedData
+      dockerfile: ./.dockerfile
+    image: garbage_collector2:latest

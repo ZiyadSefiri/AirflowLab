@@ -1,3 +1,7 @@
 /dags/
 /Orchestrator/__pycache__/
-/config/
+./config/
+/config/airflow.cfg
+/logs/
+./logs
+./logs/

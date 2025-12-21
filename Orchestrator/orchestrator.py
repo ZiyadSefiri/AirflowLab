@@ -39,8 +39,52 @@ with DAG(
             Mount(source="/home/ziyad/Dev/AirflowLab/Jobs/RawData", target="/app/input_data", type="bind"),
             Mount(source="/home/ziyad/Dev/AirflowLab/Jobs/ProcessedData", target="/app/output_data", type="bind")
         ],
+        mount_tmp_dir=False,
+        do_xcom_push=False
+        
+    )
+
+    analyse_task = DockerOperator(
+        task_id="analyse",
+        image="analyse:latest",
+        auto_remove="success",
+        docker_url="unix://var/run/docker.sock",
+        network_mode="bridge",
+         mounts=[
+            Mount(source="/home/ziyad/Dev/AirflowLab/Jobs/ProcessedData", target="/app/input_data", type="bind"),
+            Mount(source="/home/ziyad/Dev/AirflowLab/Jobs/AnalysisOutput", target="/app/output_data", type="bind")
+        ],
+        mount_tmp_dir=False,
         do_xcom_push=False
     )
 
+    garbage_collector1 = DockerOperator(
+        task_id="garbage_collector1",
+        image="garbage_collector1:latest",
+        auto_remove="success",
+        docker_url="unix://var/run/docker.sock",
+        network_mode="bridge",
+        mounts=[ Mount(source="/home/ziyad/Dev/AirflowLab/Jobs/RawData", target="/app/raw_data", type="bind")],
+        mount_tmp_dir=False,
+        do_xcom_push=False
+
+    )
+
+    garbage_collector2 = DockerOperator(
+        task_id="garbage_collector2",
+        image="garbage_collector2:latest",
+        auto_remove="success",
+        docker_url="unix://var/run/docker.sock",
+        network_mode="bridge",
+        mounts=[ Mount(source="/home/ziyad/Dev/AirflowLab/Jobs/ProcessedData", target="/app/processed_data", type="bind")],
+        mount_tmp_dir=False,
+        do_xcom_push=False
+
+
+    )
+
+    
+
     # Set dependency: transform runs after extract
-    extract_task >> transform_task
+    extract_task >> transform_task >> [analyse_task,garbage_collector1]
+    analyse_task >> garbage_collector2
